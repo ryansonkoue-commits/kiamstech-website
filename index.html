@@ -1,252 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KiamsTech | Building the Future</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KiamsTech | Websites and Google SEO for Businesses in Buea</title>
+<meta name="description" content="KiamsTech builds fast, mobile-friendly websites for local businesses in Buea and gets them found on Google. Message us on WhatsApp.">
+<style>
+:root{
+  --ink:#2a1840;
+  --ink-soft:#5a4770;
+  --mango:#ffb628;
+  --hibiscus:#e8386d;
+  --leaf:#14925f;
+  --leaf-dark:#0d6e47;
+  --sky:#1ba6c9;
+  --peach:#fff0e0;
+  --white:#ffffff;
+  --radius:24px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Trebuchet MS","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size:1.125rem;line-height:1.65;color:var(--ink);background:var(--peach);
+  -webkit-text-size-adjust:100%;
+}
+a{color:inherit}
+.wrap{width:100%;max-width:1040px;margin:0 auto;padding:0 1.25rem}
+:focus-visible{outline:4px solid var(--ink);outline-offset:3px}
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  background:var(--leaf);color:var(--white);text-decoration:none;font-weight:800;
+  font-size:1.15rem;line-height:1.2;padding:1.05rem 1.6rem;min-height:56px;
+  border-radius:999px;box-shadow:0 5px 0 var(--leaf-dark);
+  transition:transform .15s ease,box-shadow .15s ease;
+}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 var(--leaf-dark)}
+.btn svg{width:24px;height:24px;flex:none}
+.btn-small{font-size:1rem;padding:.6rem 1.1rem;min-height:44px;box-shadow:0 3px 0 var(--leaf-dark)}
+.btn-wide{width:100%}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #080b12;
-            color: #ffffff;
-            line-height: 1.6;
-        }
+/* Header */
+header{background:var(--ink);color:var(--white);padding:.8rem 0;position:sticky;top:0;z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-size:1.5rem;font-weight:900;letter-spacing:-.02em;text-decoration:none;display:flex;align-items:center;gap:.5rem}
+.logo i{display:inline-block;width:14px;height:14px;border-radius:50%;background:var(--mango);box-shadow:10px 0 0 var(--hibiscus),20px 0 0 var(--sky);margin-right:22px}
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 25px 8%;
-            border-bottom: 1px solid #1c2230;
-        }
+/* Hero */
+.hero{background:var(--mango);position:relative;overflow:hidden;padding:3.5rem 0 4.5rem}
+.hero::before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:var(--hibiscus);right:-90px;top:-70px}
+.hero::after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:var(--sky);left:-70px;bottom:-80px}
+.hero .wrap{position:relative;z-index:1}
+.tag{display:inline-block;background:var(--ink);color:var(--mango);font-weight:800;font-size:1rem;padding:.4rem 1rem;border-radius:999px;margin-bottom:1.25rem}
+h1{font-size:2.5rem;line-height:1.1;font-weight:900;letter-spacing:-.025em;margin-bottom:1.25rem;max-width:16ch}
+.hero p{font-size:1.25rem;max-width:34ch;margin-bottom:2rem;font-weight:600}
+.hero .note{margin:1rem 0 0;font-size:1rem;font-weight:700}
 
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-        }
+/* Sections */
+section{padding:4rem 0}
+h2{font-size:2rem;line-height:1.15;font-weight:900;letter-spacing:-.02em;margin-bottom:.75rem}
+.lead{color:var(--ink-soft);margin-bottom:2.25rem;max-width:40ch}
 
-        .logo span {
-            color: #55e6a5;
-        }
+/* Services */
+.cards{display:grid;gap:1.25rem}
+.service{border-radius:var(--radius);padding:1.75rem 1.5rem;color:var(--white)}
+.service h3{font-size:1.4rem;line-height:1.2;margin:1rem 0 .5rem;font-weight:900}
+.service p{font-size:1.1rem}
+.s1{background:var(--hibiscus)}
+.s2{background:var(--leaf)}
+.s3{background:var(--sky);color:var(--ink)}
+.icon{width:60px;height:60px;border-radius:18px;background:rgba(255,255,255,.28);display:grid;place-items:center}
+.icon svg{width:32px;height:32px}
 
-        nav a {
-            color: #a5adbd;
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 14px;
-        }
+/* Portfolio */
+.work{background:var(--white)}
+.project{background:var(--peach);border-radius:var(--radius);overflow:hidden}
+.screen{height:190px;padding:1rem 1rem 0;display:flex;flex-direction:column}
+.bar{display:flex;gap:6px;margin-bottom:.7rem}
+.bar b{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.7)}
+.mock{flex:1;border-radius:14px 14px 0 0;background:rgba(255,255,255,.92);padding:1rem;display:flex;flex-direction:column;gap:.5rem}
+.mock .h{height:16px;width:70%;border-radius:8px}
+.mock .l{height:9px;width:90%;border-radius:5px;background:#e6dcef}
+.mock .l.short{width:60%}
+.mock .pill{margin-top:auto;height:26px;width:44%;border-radius:999px}
+.p1 .screen{background:var(--hibiscus)}.p1 .h,.p1 .pill{background:var(--hibiscus)}
+.p2 .screen{background:var(--leaf)}.p2 .h,.p2 .pill{background:var(--leaf)}
+.p3 .screen{background:var(--ink)}.p3 .h,.p3 .pill{background:var(--mango)}
+.project .info{padding:1.4rem 1.5rem 1.75rem}
+.project h3{font-size:1.3rem;line-height:1.25;font-weight:900;margin-bottom:.15rem}
+.project .where{font-weight:700;color:var(--hibiscus);margin-bottom:.6rem;font-size:1rem}
 
-        .hero {
-            min-height: 75vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 60px 20px;
-        }
+/* About */
+.about{background:var(--sky)}
+.about-box{background:var(--white);border-radius:var(--radius);padding:2rem 1.5rem;border-bottom:8px solid var(--mango)}
+.about-box p+p{margin-top:1rem}
 
-        .tag {
-            color: #55e6a5;
-            border: 1px solid #234b3b;
-            padding: 7px 16px;
-            border-radius: 30px;
-            font-size: 13px;
-            margin-bottom: 25px;
-        }
+/* Testimonial */
+.quote{background:var(--ink);color:var(--white);border-radius:var(--radius);padding:2.25rem 1.5rem;position:relative}
+.quote::before{content:"\201C";position:absolute;top:-.5rem;left:1.1rem;font-size:7rem;line-height:1;color:var(--mango);font-family:Georgia,serif}
+.quote p{font-size:1.35rem;line-height:1.5;font-weight:600;margin-top:2.5rem}
+.quote cite{display:block;font-style:normal;margin-top:1.5rem;color:var(--mango);font-weight:800}
+.quote cite span{display:block;color:#d9cbe8;font-weight:600;font-size:1rem}
 
-        h1 {
-            font-size: clamp(42px, 7vw, 76px);
-            line-height: 1.1;
-            max-width: 850px;
-            letter-spacing: -2px;
-        }
+/* Final call */
+.cta{background:var(--hibiscus);color:var(--white);text-align:center}
+.cta h2{max-width:18ch;margin:0 auto .75rem}
+.cta p{margin:0 auto 1.75rem;max-width:32ch}
+.cta .btn{background:var(--white);color:var(--leaf-dark);box-shadow:0 5px 0 rgba(0,0,0,.25)}
 
-        h1 span {
-            color: #55e6a5;
-        }
+/* Footer */
+footer{background:var(--ink);color:#e9ddf5;padding:2.5rem 0 2rem;font-size:1rem}
+footer .logo{margin-bottom:.75rem;color:var(--white)}
+footer p{margin-bottom:.4rem}
+footer .small{margin-top:1.5rem;color:#b9a8cc;font-size:.95rem}
 
-        .hero p {
-            color: #9ba5b5;
-            max-width: 550px;
-            margin: 25px 0 35px;
-        }
-
-        .button {
-            display: inline-block;
-            background: #55e6a5;
-            color: #080b12;
-            padding: 14px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .button:hover {
-            background: #ffffff;
-            transform: translateY(-3px);
-        }
-
-        .projects {
-            padding: 60px 8% 100px;
-        }
-
-        .projects h2 {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            color: #9ba5b5;
-            margin-bottom: 35px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .card {
-            background: #111722;
-            border: 1px solid #242d3c;
-            padding: 28px;
-            border-radius: 14px;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            border-color: #55e6a5;
-            transform: translateY(-5px);
-        }
-
-        .card h3 {
-            margin-bottom: 12px;
-        }
-
-        .card p {
-            color: #9ba5b5;
-            font-size: 14px;
-        }
-
-        .number {
-            color: #55e6a5;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-
-        footer {
-            border-top: 1px solid #1c2230;
-            text-align: center;
-            padding: 25px;
-            color: #778193;
-            font-size: 13px;
-        }
-
-        @media (max-width: 700px) {
-            nav {
-                padding: 20px 5%;
-            }
-
-            nav a {
-                margin-left: 12px;
-            }
-
-            .grid {
-                grid-template-columns: 1fr;
-            }
-
-            .projects {
-                padding: 50px 5%;
-            }
-        }
-    </style>
+/* Larger screens */
+@media(min-width:720px){
+  body{font-size:1.2rem}
+  h1{font-size:3.6rem}
+  h2{font-size:2.6rem}
+  .hero{padding:5.5rem 0 6.5rem}
+  section{padding:5.5rem 0}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .btn-wide{width:auto}
+  .about-box{padding:3rem}
+  .quote{padding:3rem}
+  .quote p{font-size:1.7rem}
+}
+</style>
 </head>
-
 <body>
 
-    <nav>
-        <div class="logo">Kiams<span>Tech.</span></div>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="KiamsTech home"><i></i>KiamsTech</a>
+    <a class="btn btn-small" href="https://wa.me/237657084967">WhatsApp us</a>
+  </div>
+</header>
 
-        <div>
-            <a href="#home">Home</a>
-            <a href="#projects">Projects</a>
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Web design in Buea</span>
+    <h1>Be the business Buea finds first on Google.</h1>
+    <p>We build fast, good-looking websites for local businesses, then do the SEO that puts them in front of people searching nearby.</p>
+    <a class="btn btn-wide" href="https://wa.me/237657084967">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.500l1.700-5A8.500 8.500 0 1 1 21 11.500z"/><path d="M9 9.500c0 3 2.500 5.500 5.500 5.500l1.500-1.500-2-1-1 .7c-1-.4-1.800-1.200-2.200-2.200l.7-1-1-2z"/></svg>
+      Chat with Ryan on WhatsApp
+    </a>
+    <p class="note">Free advice. We reply the same day.</p>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <h2>What we do for your business</h2>
+    <p class="lead">Two things, done properly: a website your customers enjoy using, and the SEO that gets it seen.</p>
+    <div class="cards">
+      <article class="service s1">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
+        <h3>Websites made for phones</h3>
+        <p>Most people in Buea browse on a phone, often on a slow connection. We build light, quick sites with your prices, photos, location and a WhatsApp button on every page.</p>
+      </article>
+      <article class="service s2">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.500-3.500"/></svg></div>
+        <h3>SEO to rank on Google</h3>
+        <p>We set up your site so it appears when someone searches for what you sell, like "bakery in Buea" or "rooms near Molyko". More searches become more calls and messages.</p>
+      </article>
+      <article class="service s3">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.100 7-11a7 7 0 0 0-14 0c0 4.900 7 11 7 11z"/><circle cx="12" cy="10" r="2.500"/></svg></div>
+        <h3>Google Maps and your listing</h3>
+        <p>We set up and tidy your Google Business Profile with the right address, opening hours and photos, so people can find your shop on the map and reach you in one tap.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <h2>Recent work</h2>
+    <p class="lead">A look at the kind of sites we build for Buea businesses.</p>
+    <div class="cards">
+      <article class="project p1">
+        <div class="screen"><div class="bar"><b></b><b></b><b></b></div><div class="mock"><div class="h"></div><div class="l"></div><div class="l short"></div><div class="pill"></div></div></div>
+        <div class="info">
+          <h3>Mile 17 Bakery</h3>
+          <p class="where">Bakery, Mile 17</p>
+          <p>A menu with prices, cake order requests sent straight to WhatsApp, and a map pin so customers can find the shop.</p>
         </div>
-    </nav>
-
-    <section class="hero" id="home">
-
-        <div class="tag">Welcome to KiamsTech</div>
-
-        <h1>
-            Building the <span>future</span><br>
-            one line at a time.
-        </h1>
-
-        <p>
-            I'm a Computer Science student passionate about
-            technology, web development, and building digital
-            experiences that make a difference.
-        </p>
-
-        <a href="#projects" class="button">
-            Explore my projects →
-        </a>
-
-    </section>
-
-    <section class="projects" id="projects">
-
-        <h2>What I'm building</h2>
-
-        <p class="subtitle">
-            Turning ideas into real digital experiences.
-        </p>
-
-        <div class="grid">
-
-            <div class="card">
-                <div class="number">01 / FRONTEND</div>
-                <h3>Web Development</h3>
-                <p>
-                    Creating modern, responsive websites
-                    using HTML, CSS, and JavaScript.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="number">02 / PYTHON</div>
-                <h3>Python Projects</h3>
-                <p>
-                    Exploring programming and developing
-                    useful applications with Python.
-                </p>
-            </div>
-
-            <div class="card">
-                <div class="number">03 / FUTURE</div>
-                <h3>Full-Stack Development</h3>
-                <p>
-                    Learning to build complete applications
-                    from the frontend to the backend.
-                </p>
-            </div>
-
+      </article>
+      <article class="project p2">
+        <div class="screen"><div class="bar"><b></b><b></b><b></b></div><div class="mock"><div class="h"></div><div class="l"></div><div class="l short"></div><div class="pill"></div></div></div>
+        <div class="info">
+          <h3>Molyko Student Rooms</h3>
+          <p class="where">Rental rooms, Molyko</p>
+          <p>Room photos, monthly rent and distance to campus, plus a quick enquiry button for students and parents.</p>
         </div>
+      </article>
+      <article class="project p3">
+        <div class="screen"><div class="bar"><b></b><b></b><b></b></div><div class="mock"><div class="h"></div><div class="l"></div><div class="l short"></div><div class="pill"></div></div></div>
+        <div class="info">
+          <h3>Soppo Auto Care</h3>
+          <p class="where">Car repair, Great Soppo</p>
+          <p>A clear list of services, opening hours and directions, built to appear when drivers search for a mechanic nearby.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
-    </section>
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-box">
+      <h2>Built in Buea, for Buea</h2>
+      <p>KiamsTech is a small web design studio run by Ryan right here in Buea. We know how our customers search, what the network is like, and why a WhatsApp button matters more than a contact form.</p>
+      <p>You speak to the person who builds your site, not a call centre, and we explain everything in plain language.</p>
+    </div>
+  </div>
+</section>
 
-    <footer>
-        © 2026 KiamsTech. Building the future.
-    </footer>
+<section id="testimonial">
+  <div class="wrap">
+    <figure class="quote">
+      <p>Before the website, people only knew us by word of mouth. Now new customers from around Buea message us on WhatsApp every week, and they say they found us on Google.</p>
+      <cite>Mama Ngwa<span>Owner, Mile 17 Bakery, Buea</span></cite>
+    </figure>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Ready to get found?</h2>
+    <p>Tell Ryan about your business on WhatsApp and get a clear plan and price.</p>
+    <a class="btn btn-wide" href="https://wa.me/237657084967">Start a chat on WhatsApp</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top"><i></i>KiamsTech</a>
+    <p>Websites and Google SEO for local businesses.</p>
+    <p>Buea, South West Region, Cameroon</p>
+    <p>WhatsApp: <a href="https://wa.me/237657084967">+237 657 084 967</a></p>
+    <p class="small">&copy; 2026 KiamsTech. Owner: Ryan.</p>
+  </div>
+</footer>
 
 </body>
 </html>
